@@ -284,6 +284,223 @@ class integration_project {
             ));
         });
 
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/groep', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakGroep',
+                'args' => array(
+                    'groepUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'groepsnaam' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'adminEmail' => array(
+                        'type' => 'string'
+                    ),
+                    'isAanwezig' => array(
+                        'type' => 'boolean'
+                    ),
+                    'isGeblokkeerd' => array(
+                        'type' => 'boolean'
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/kalender', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakKalender',
+                'args' => array(
+                    'kalenderUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'link' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'type' => array(
+                        'type' => 'string'
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/taak', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakTaak',
+                'args' => array(
+                    'taakUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'naam' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'omschrijving' => array(
+                        'type' => 'string'
+                    ),
+                    'startDatum' => array(
+                        'type' => 'string'
+                    ),
+                    'eindDatum' => array(
+                        'type' =>'string'
+                    ),
+                    'aantalPersonen' => array(
+                        'type' => 'integer'
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/shift', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakShift',
+                'args' => array(
+                    'shiftUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'werknemerUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'taakUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/reservatie', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakReservatie',
+                'args' => array(
+                    'reservatieUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'bezoekerUUID' => array(
+                        'type' => 'string'
+                    ),
+                    'sessieUUID' => array(
+                        'type' => 'string'
+                    ),
+                    'groepUUID' => array(
+                        'type' => 'string'
+                    ),
+                    'betaalstatus' => array(
+                        'type' => 'boolean'
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/registratie', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakRegistratie',
+                'args' => array(
+                    'registratieUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'bezoekerUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'betaalstatus' => array(
+                        'type' => 'boolean'
+                    ),
+                    'isAanwezig' => array(
+                        'type' => 'boolean'
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
+        add_action('rest_api_init', function () {
+            register_rest_route('ip', '/locatie', array(
+                'methods' => 'POST',
+                'callback' => __CLASS__ . '::maakLocatie',
+                'args' => array(
+                    'locatieUUID' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'locatie' => array(
+                        'type' => 'string',
+                        'required' => true
+                    ),
+                    'isActief' => array(
+                        'type' => 'boolean',
+                        'required' => true
+                    ),
+                    'versienummer' => array(
+                        'type' => 'integer',
+                        'required' => true
+                    )
+                ),
+            ));
+        });
+
     }
 
     function test(WP_REST_Request $request) {
@@ -395,7 +612,7 @@ class integration_project {
         $versienummer = $request->get_param('versienummer');
 
 
-        //Checken of organisatie al aanwezig is met hoger versienummer.
+        //Checken of event al aanwezig is met hoger versienummer.
         $query = "
 		    SELECT `versienummer` 
             FROM `events` 
@@ -466,7 +683,7 @@ class integration_project {
         $versienummer = $request->get_param('versienummer');
 
 
-        //Checken of organisatie al aanwezig is met hoger versienummer.
+        //Checken of sessie al aanwezig is met hoger versienummer.
         $query = "
 		    SELECT `versienummer` 
             FROM `sessies` 
@@ -536,7 +753,7 @@ class integration_project {
         $versienummer = $request->get_param('versienummer');
 
 
-        //Checken of organisatie al aanwezig is met hoger versienummer.
+        //Checken of werknemer al aanwezig is met hoger versienummer.
         $query = "
 		    SELECT `versienummer` 
             FROM `werknemers` 
@@ -605,7 +822,7 @@ class integration_project {
         $versienummer = $request->get_param('versienummer');
 
 
-        //Checken of organisatie al aanwezig is met hoger versienummer.
+        //Checken of bezoeker al aanwezig is met hoger versienummer.
         $query = "
 		    SELECT `versienummer` 
             FROM `bezoekers` 
@@ -651,6 +868,447 @@ class integration_project {
             }
             else {									//versienummer is lager dan in database frontend
                 return "Bezoeker {$bezoekerUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakGroep(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $groepUUID = $request->get_param('groepUUID');
+        $groepsnaam = $request->get_param('groepsnaam');
+        $adminEmail = $request->get_param('adminEmail');
+        $isAanwezig = $request->get_param('isAanwezig');
+        $isGeblokkeerd = $request->get_param('isGeblokkeerd');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of groep al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `groepen` 
+            WHERE `groepUUID` = '$groepUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //groep bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `groepen`(`groepUUID`, `groepsnaam`, `adminEmail`, `isAanwezig`, `isGeblokkeerd`, `isActief`, `versienummer`)
+                VALUES ('$groepUUID', '$groepsnaam', '$adminEmail', '$isAanwezig', '$isGeblokkeerd', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Groep {$groepUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken groep {$groepUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//groep bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE groepen
+				    SET groepsnaam = '$groepsnaam', adminEmail = '$adminEmail', isAanwezig = '$isAanwezig', isGeblokkeerd = '$isGeblokkeerd', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE groepUUID = '$groepUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Groep {$groepUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken groep {$groepUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Groep {$groepUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakKalender(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $kalenderUUID = $request->get_param('kalenderUUID');
+        $link = $request->get_param('link');
+        $type = $request->get_param('type');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of kalender al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `kalenders` 
+            WHERE `kalenderUUID` = '$kalenderUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //groep bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `kalenders`(`kalenderUUID`, `link`, `type`, `isActief`, `versienummer`)
+                VALUES ('$kalenderUUID', '$link', '$type', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Kalender {$kalenderUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken kalender {$kalenderUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//kalender bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE kalenders
+				    SET link = '$link', type = '$type', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE kalenderUUID = '$kalenderUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Kalender {$kalenderUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken kalender {$kalenderUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Kalender {$kalenderUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakTaak(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $taakUUID = $request->get_param('taakUUID');
+        $naam = $request->get_param('naam');
+        $omschrijving = $request->get_param('omschrijving');
+        $startDatum = $request->get_param('startDatum');
+        $eindDatum = $request->get_param('eindDatum');
+        $aantalPersonen = $request->get_param('aantalPersonen');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of taak al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `taken` 
+            WHERE `taakUUID` = '$taakUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //taak bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `taken`(`taakUUID`, `naam`, `omschrijving`, `startDatum`, `eindDatum`, `aantalPersonen`, `isActief`, `versienummer`)
+                VALUES ('$taakUUID', '$naam', '$omschrijving', '$startDatum', '$eindDatum', '$aantalPersonen', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Taak {$taakUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken taak {$taakUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//taak bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE taken
+				    SET naam = '$naam', omschrijving = '$omschrijving', startDatum = '$startDatum', eindDatum = '$eindDatum', aantalPersonen = '$aantalPersonen', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE taakUUID = '$taakUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Taak {$taakUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken taak {$taakUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Taak {$taakUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakShift(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $shiftUUID = $request->get_param('shiftUUID');
+        $werknemerUUID = $request->get_param('werknemerUUID');
+        $taakUUID = $request->get_param('taakUUID');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of shift al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `shiften` 
+            WHERE `shiftUUID` = '$shiftUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //shift bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `shiften`(`shiftUUID`, `werknemerUUID`, `taakUUID`, `isActief`, `versienummer`)
+                VALUES ('$shiftUUID', '$werknemerUUID', '$taakUUID', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Shift {$shiftUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken shift {$shiftUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//shift bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE shiften
+				    SET werknemerUUID = '$werknemerUUID', taakUUID = '$taakUUID', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE shiftUUID = '$shiftUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Shift {$shiftUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken shift {$shiftUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Shift {$shiftUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakReservatie(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $reservatieUUID = $request->get_param('reservatieUUID');
+        $bezoekerUUID = $request->get_param('bezoekerUUID');
+        $sessieUUID = $request->get_param('sessieUUID');
+        $groepUUID = $request->get_param('groepUUID');
+        $betaalstatus = $request->get_param('betaalstatus');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of reservatie al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `reservaties` 
+            WHERE `reservatieUUID` = '$reservatieUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //reservatie bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `reservaties`(`reservatieUUID`, `bezoekerUUID`, `sessieUUID`, `groepUUID`, `betaalstatus`, `isActief`, `versienummer`) 
+                VALUES ('$reservatieUUID', '$bezoekerUUID', '$sessieUUID', '$groepUUID', '$betaalstatus', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Reservatie {$reservatieUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken reservatie {$reservatieUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//reservatie bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE reservaties
+				    SET bezoekerUUID = '$bezoekerUUID', sessieUUID = '$sessieUUID', groepUUID = '$groepUUID', betaalstatus = '$betaalstatus', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE reservatieUUID = '$reservatieUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Reservatie {$reservatieUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken reservatie {$reservatieUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Reservatie {$reservatieUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakRegistratie(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $registratieUUID = $request->get_param('registratieUUID');
+        $bezoekerUUID = $request->get_param('bezoekerUUID');
+        $betaalstatus = $request->get_param('betaalstatus');
+        $isAanwezig = $request->get_param('isAanwezig');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of registratie al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `registraties` 
+            WHERE `registratieUUID` = '$registratieUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //registratie bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `registraties`(`registratieUUID`, `bezoekerUUID`, `betaalstatus`, `isAanwezig`, `isActief`, `versienummer`)
+                VALUES ('$registratieUUID', '$bezoekerUUID', '$betaalstatus', '$isAanwezig', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Registratie {$registratieUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken registratie {$registratieUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//registratie bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE registraties
+				    SET bezoekerUUID = '$bezoekerUUID', betaalstatus = '$betaalstatus', isAanwezig = '$isAanwezig', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE registratieUUID = '$registratieUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Registratie {$registratieUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken registratie {$registratieUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Registratie {$registratieUUID} werd niet geupdate: inhoud verouderd.";
+            }
+        }
+    }
+
+    function maakLocatie(WP_REST_Request $request) {
+
+        $db = connectToDB();
+
+        //Sla binnengekregen data op in lokale variabelen
+        $locatieUUID = $request->get_param('locatieUUID');
+        $locatie = $request->get_param('locatie');
+        $isActief = $request->get_param('isActief');
+        $versienummer = $request->get_param('versienummer');
+
+
+        //Checken of locatie al aanwezig is met hoger versienummer.
+        $query = "
+		    SELECT `versienummer` 
+            FROM `locaties` 
+            WHERE `locatieUUID` = '$locatieUUID'
+		;";
+
+        $result = $db->query($query)->fetch_array(MYSQLI_ASSOC);
+
+        if ($result == null) {                    //locatie bestaat nog niet
+            //Sql statement
+            $query = "
+                INSERT INTO `locaties`(`locatieUUID`, `locatie`, `isActief`, `versienummer`)
+                VALUES ('$locatieUUID', '$locatie', '$isActief', '$versienummer')
+		    ;";
+
+            $result = $db->query($query);
+
+
+            if ($result === TRUE) {
+                return "Locatie {$locatieUUID} succesvol gecreëerd.";
+            }
+            else {
+                return "Aanmaken locatie {$locatieUUID} niet gelukt: databasefout {$db->error}";
+            }
+        }
+        else {
+            if ($result['versienummer'] < $versienummer) { 		//locatie bestaat maar frontend heeft lager versienummer
+                //Sql statement
+                $query = "
+				    UPDATE locaties
+				    SET locatie = '$locatie', isActief = '$isActief', versienummer = '$versienummer'
+				    WHERE locatieUUID = '$locatieUUID'
+			    ;";
+
+                $result = $db->query($query);
+
+                if ($result === TRUE) {
+                    return "Locatie {$locatieUUID} succesvol geupdate.";
+                }
+                else {
+                    return "Aanmaken locatie {$locatieUUID} niet gelukt: databasefout {$db->error}";
+                }
+            }
+            else {									//versienummer is lager dan in database frontend
+                return "Locatie {$locatieUUID} werd niet geupdate: inhoud verouderd.";
             }
         }
     }
