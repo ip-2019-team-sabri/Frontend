@@ -1,0 +1,11 @@
+C:\Users\bram_\source\repos\frontendApp\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.deps.json
+C:\Users\bram_\source\repos\frontendApp\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.runtimeconfig.json
+C:\Users\bram_\source\repos\frontendApp\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.runtimeconfig.dev.json
+C:\Users\bram_\source\repos\frontendApp\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.dll
+C:\Users\bram_\source\repos\frontendApp\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.pdb
+C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.csprojAssemblyReference.cache
+C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.csproj.CoreCompileInputs.cache
+C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.AssemblyInfoInputs.cache
+C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.AssemblyInfo.cs
+C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.dll
+C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.pdb
