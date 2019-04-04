@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
 using frontendApp.models;
+using System.Net.Http.Formatting;
 
 namespace frontendApp.requests
 {
@@ -37,12 +38,13 @@ namespace frontendApp.requests
                         {
                             members.Add(user.name);
                         }
+                        Console.WriteLine(members[1]);
                     }
                 }
             }
         }
 
-        public async static void addUser(UserModel user)
+        public async static void addBezoeker(BezoekerModel bezoeker)
         {
             using (var client = new HttpClient())
             {
@@ -54,21 +56,81 @@ namespace frontendApp.requests
                 // "basic "+ Convert.ToBase64String(byteArray)
                 AuthenticationHeaderValue ahv = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
                 client.DefaultRequestHeaders.Authorization = ahv;
-                using (HttpResponseMessage response = await client.PostAsJsonAsync("http://10.3.56.7/wp-json/wp/v2/users", user))
+                JsonMediaTypeFormatter jsonFormat = new JsonMediaTypeFormatter();
+                jsonFormat.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
+                jsonFormat.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                using (HttpResponseMessage response = await client.PostAsync("http://10.3.56.7/wp-json/ip/bezoeker", bezoeker, jsonFormat))
                 {
-                    using (HttpContent content = response.Content)
+                    using (HttpContent httpContent = response.Content)
                     {
+
+                        string content = await httpContent.ReadAsStringAsync();
+                        int code = Int32.Parse(content);
+                        if (code == 0)
+                            Console.WriteLine("bezoeker is succesvol toegevoegd");
+                        if (code == 1)
+                            Console.WriteLine("Bezoeker kon niet worden toegevoegd");
+                        if (code == 2)
+                            Console.WriteLine("bezoeker bestaat al");
+
+                        /*
                         var textContent = await content.ReadAsStringAsync();
                         dynamic json = JValue.Parse(textContent);
                         
                         UserModel u = jsonToUser(json);
+                        */
                         
                     }
                 }
             }
+
+
         }
 
-       private static UserModel jsonToUser(dynamic user)
+        public async static void addSessie(SessieModel sessie)
+        {
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                // test@testerer.de:WSTest
+                var byteArray = Encoding.ASCII.GetBytes("frontender" + ":" + "frontend");
+
+                // "basic "+ Convert.ToBase64String(byteArray)
+                AuthenticationHeaderValue ahv = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
+                client.DefaultRequestHeaders.Authorization = ahv;
+                JsonMediaTypeFormatter jsonFormat = new JsonMediaTypeFormatter();
+                jsonFormat.SerializerSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
+                jsonFormat.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                using (HttpResponseMessage response = await client.PostAsync("http://10.3.56.7/wp-json/ip/sessie", sessie, jsonFormat))
+                {
+                    using (HttpContent httpContent = response.Content)
+                    {
+
+                        string content = await httpContent.ReadAsStringAsync();
+                        int code = Int32.Parse(content);
+                        if (code == 0)
+                            Console.WriteLine("bezoeker is succesvol toegevoegd");
+                        if (code == 1)
+                            Console.WriteLine("Bezoeker kon niet worden toegevoegd");
+                        if (code == 2)
+                            Console.WriteLine("bezoeker bestaat al");
+
+                        /*
+                        var textContent = await content.ReadAsStringAsync();
+                        dynamic json = JValue.Parse(textContent);
+                        
+                        UserModel u = jsonToUser(json);
+                        */
+
+                    }
+                }
+            }
+
+
+        }
+
+        private static UserModel jsonToUser(dynamic user)
         {
             int id = user.id;
             string username = user.username;

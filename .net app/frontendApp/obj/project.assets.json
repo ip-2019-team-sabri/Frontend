@@ -793,11 +793,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bram_\\source\\repos\\frontendApp\\frontendApp\\frontendApp.csproj",
+      "projectUniqueName": "C:\\Dev\\Frontend\\.net app\\frontendApp\\frontendApp.csproj",
       "projectName": "frontendApp",
-      "projectPath": "C:\\Users\\bram_\\source\\repos\\frontendApp\\frontendApp\\frontendApp.csproj",
+      "projectPath": "C:\\Dev\\Frontend\\.net app\\frontendApp\\frontendApp.csproj",
       "packagesPath": "C:\\Users\\bram_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bram_\\source\\repos\\frontendApp\\frontendApp\\obj\\",
+      "outputPath": "C:\\Dev\\Frontend\\.net app\\frontendApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
