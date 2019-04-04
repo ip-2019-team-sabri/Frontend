@@ -9,20 +9,14 @@ namespace frontendApp
     {
         static void Main(string[] args)
         {
+            BezoekerModel b = new BezoekerModel("1test", "De Plekker", "Bram", true, 2309);
 
-            UserModel u1 = new UserModel();
-
-            u1.email = "bram.de.plekker@student.ehb.be";
-            u1.first_name = "test";
-            u1.last_name = "test";
-            u1.username = "test";
-            u1.password = "1234";
-            u1.roles = "speaker";
-
+            SessieModel sessie = new SessieModel("sessie1", "sessie", true, 1);
+            
             //Users.getUsers();
-            Users.addUser(u1);
+            Users.addSessie(sessie);
                              
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

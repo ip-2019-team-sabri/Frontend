@@ -9,3 +9,14 @@ C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\fron
 C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.AssemblyInfo.cs
 C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.dll
 C:\Users\bram_\source\repos\frontendApp\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.pdb
+C:\Dev\Frontend\.net app\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.deps.json
+C:\Dev\Frontend\.net app\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.runtimeconfig.json
+C:\Dev\Frontend\.net app\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.runtimeconfig.dev.json
+C:\Dev\Frontend\.net app\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.dll
+C:\Dev\Frontend\.net app\frontendApp\bin\Debug\netcoreapp2.1\frontendApp.pdb
+C:\Dev\Frontend\.net app\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.csprojAssemblyReference.cache
+C:\Dev\Frontend\.net app\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.csproj.CoreCompileInputs.cache
+C:\Dev\Frontend\.net app\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.AssemblyInfoInputs.cache
+C:\Dev\Frontend\.net app\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.AssemblyInfo.cs
+C:\Dev\Frontend\.net app\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.dll
+C:\Dev\Frontend\.net app\frontendApp\obj\Debug\netcoreapp2.1\frontendApp.pdb
