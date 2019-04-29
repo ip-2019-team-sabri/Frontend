@@ -1,0 +1,24 @@
+[11:55:24.48] DEBUG: Hello world!
+[11:55:24.48] INFO: Hello world!
+[11:55:24.49] WARNING: Hello world!
+[11:55:24.49] ERROR: Hello world!
+[11:55:24.63] DEBUG: Creating connection instance.
+[11:57:11.74] INFO: Creating connection.
+[11:57:11.88] DEBUG: Creating publisher instance.
+[11:57:11.90] DEBUG: Publisher initialized, checking cache every 30000
+[11:57:17.29] INFO: Connecting to RabbitMQ server.
+[11:57:17.54] INFO: Successfully connected to RabbitMQ server.
+[11:57:17.60] INFO: Processing message.
+[11:57:28.09] INFO: Processing message.
+[11:57:35.49] INFO: Processing message.
+[11:57:35.55] INFO: Message sent to server.
+[11:57:38.74] INFO: Processing message.
+[11:57:42.82] INFO: Checking cached messages.
+[11:57:42.82] INFO: No cached messages found. Checking again in 30s.
+[11:57:42.82] INFO: Processing message.
+[11:57:44.77] INFO: Processing message.
+[11:57:46.79] INFO: Processing message.
+[11:57:47.82] INFO: Processing message.
+[11:57:47.88] INFO: Processing message.
+[11:57:48.98] INFO: Processing message.
+[11:57:49.72] INFO: Processing message.

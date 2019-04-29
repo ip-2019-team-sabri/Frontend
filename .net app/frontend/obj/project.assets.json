@@ -4369,11 +4369,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\verander\\frontend\\frontend\\frontend.csproj",
-      "projectName": "frontend",
-      "projectPath": "C:\\dev\\verander\\frontend\\frontend\\frontend.csproj",
+      "projectUniqueName": "C:\\dev\\Frontend\\.net app\\frontend\\Receiver.csproj",
+      "projectName": "Receiver",
+      "projectPath": "C:\\dev\\Frontend\\.net app\\frontend\\Receiver.csproj",
       "packagesPath": "C:\\Users\\bram_\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\verander\\frontend\\frontend\\obj\\",
+      "outputPath": "C:\\dev\\Frontend\\.net app\\frontend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\ProgramData\\Xamarin\\NuGet\\",

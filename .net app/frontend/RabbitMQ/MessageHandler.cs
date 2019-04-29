@@ -20,7 +20,9 @@ namespace frontend
 
         public void HandleBezoekerMessage(BezoekerMessage bezoekerMessage)
         {
+            String bankrekening = bezoekerMessage.body.bankrekeningnummer;
             throw new NotImplementedException();
+            // Nieuwe bezoeker aanmaken
         }
 
         public void HandleCreditnotaMessage(CreditnotaMessage creditnotaMessage)
@@ -35,7 +37,7 @@ namespace frontend
 
         public void HandleEventMessage(EventMessage eventMessage)
         {
-        //    throw new NotImplementedException();
+           throw new NotImplementedException();
         }
 
         public void HandleFactuurMessage(FactuurMessage factuurMessage)
@@ -56,6 +58,7 @@ namespace frontend
         public void HandleKalenderMessage(KalenderMessage kalenderMessage)
         {
             throw new NotImplementedException();
+            // Nieuw kalenderItem aanmaken
         }
 
         public void HandleKeepAliveMessage(KeepAliveMessage keepAliveMessage)
@@ -96,6 +99,7 @@ namespace frontend
         public void HandleSessieMessage(SessieMessage sessieMessage)
         {
             throw new NotImplementedException();
+            // nieuwe sessie aanmaken
         }
 
         public void HandleTaakMessage(TaakMessage taakMessage)

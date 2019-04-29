@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\verander\\frontend\\frontend\\frontend.csproj": {}
+    "C:\\dev\\Frontend\\.net app\\frontend\\frontend.csproj": {}
   },
   "projects": {
-    "C:\\dev\\verander\\frontend\\frontend\\frontend.csproj": {
+    "C:\\dev\\Frontend\\.net app\\frontend\\frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\verander\\frontend\\frontend\\frontend.csproj",
+        "projectUniqueName": "C:\\dev\\Frontend\\.net app\\frontend\\frontend.csproj",
         "projectName": "frontend",
-        "projectPath": "C:\\dev\\verander\\frontend\\frontend\\frontend.csproj",
+        "projectPath": "C:\\dev\\Frontend\\.net app\\frontend\\frontend.csproj",
         "packagesPath": "C:\\Users\\bram_\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\verander\\frontend\\frontend\\obj\\",
+        "outputPath": "C:\\dev\\Frontend\\.net app\\frontend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\ProgramData\\Xamarin\\NuGet\\",

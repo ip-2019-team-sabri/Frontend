@@ -1,0 +1,12 @@
+[02:41:08.74] DEBUG: Hello world!
+[02:41:08.74] INFO: Hello world!
+[02:41:08.74] WARNING: Hello world!
+[02:41:08.74] ERROR: Hello world!
+[02:41:08.74] DEBUG: Creating connection instance.
+[02:41:08.75] INFO: Creating connection.
+[02:41:08.81] INFO: Connecting to RabbitMQ server.
+[02:41:09.09] INFO: Successfully connected to RabbitMQ server.
+[02:41:09.17] ERROR: Could not process message: System.Xml.XmlException
+[02:41:09.17] ERROR: Could not process message: System.Xml.XmlException
+[02:41:09.18] ERROR: Could not process message: System.Xml.XmlException
+[02:41:48.38] INFO: Processing message.

@@ -1,0 +1,11 @@
+C:\dev\Frontend\.net app\frontend\bin\Debug\netcoreapp2.2\Receiver.deps.json
+C:\dev\Frontend\.net app\frontend\bin\Debug\netcoreapp2.2\Receiver.runtimeconfig.json
+C:\dev\Frontend\.net app\frontend\bin\Debug\netcoreapp2.2\Receiver.runtimeconfig.dev.json
+C:\dev\Frontend\.net app\frontend\bin\Debug\netcoreapp2.2\Receiver.dll
+C:\dev\Frontend\.net app\frontend\bin\Debug\netcoreapp2.2\Receiver.pdb
+C:\dev\Frontend\.net app\frontend\obj\Debug\netcoreapp2.2\Receiver.csprojAssemblyReference.cache
+C:\dev\Frontend\.net app\frontend\obj\Debug\netcoreapp2.2\Receiver.csproj.CoreCompileInputs.cache
+C:\dev\Frontend\.net app\frontend\obj\Debug\netcoreapp2.2\Receiver.AssemblyInfoInputs.cache
+C:\dev\Frontend\.net app\frontend\obj\Debug\netcoreapp2.2\Receiver.AssemblyInfo.cs
+C:\dev\Frontend\.net app\frontend\obj\Debug\netcoreapp2.2\Receiver.dll
+C:\dev\Frontend\.net app\frontend\obj\Debug\netcoreapp2.2\Receiver.pdb

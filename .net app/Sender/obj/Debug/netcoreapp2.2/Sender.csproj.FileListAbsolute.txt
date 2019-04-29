@@ -1,0 +1,7 @@
+C:\dev\Frontend\.net app\Sender\bin\Debug\netcoreapp2.2\Sender.deps.json
+C:\dev\Frontend\.net app\Sender\bin\Debug\netcoreapp2.2\Sender.runtimeconfig.json
+C:\dev\Frontend\.net app\Sender\bin\Debug\netcoreapp2.2\Sender.runtimeconfig.dev.json
+C:\dev\Frontend\.net app\Sender\bin\Debug\netcoreapp2.2\Sender.dll
+C:\dev\Frontend\.net app\Sender\obj\Debug\netcoreapp2.2\Sender.csproj.CoreCompileInputs.cache
+C:\dev\Frontend\.net app\Sender\obj\Debug\netcoreapp2.2\Sender.AssemblyInfoInputs.cache
+C:\dev\Frontend\.net app\Sender\obj\Debug\netcoreapp2.2\Sender.AssemblyInfo.cs
