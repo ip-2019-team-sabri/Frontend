@@ -1,0 +1,9 @@
+[01:24:26.67] DEBUG: Hello world!
+[01:24:26.67] INFO: Hello world!
+[01:24:26.68] WARNING: Hello world!
+[01:24:26.68] ERROR: Hello world!
+[01:24:26.68] DEBUG: Creating connection instance.
+[01:24:26.69] INFO: Creating connection.
+[01:24:26.76] INFO: Connecting to RabbitMQ server.
+[01:24:27.05] INFO: Successfully connected to RabbitMQ server.
+[01:24:27.12] INFO: Processing message.
