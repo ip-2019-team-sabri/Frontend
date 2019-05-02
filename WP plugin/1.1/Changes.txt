@@ -1,0 +1,2 @@
+1.0	Basisfunctionaliteit. Alle data van alle flows kan meegegeven worden in POST-request, data word opgeslagen in aparte tabellen.
+1.1	Alle data van gebruikers wordt meteen opgeslagen in WP_users tabel. Bij nieuwe registratie of aanpassen e-mail wordt mail naar gebruiker gestuurd om wachtwoord in te stellen.

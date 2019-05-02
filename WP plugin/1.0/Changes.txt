@@ -1,0 +1,1 @@
+1.0	Basisfunctionaliteit. Alle data van alle flows kan meegegeven worden in POST-request, data word opgeslagen in aparte tabellen.
